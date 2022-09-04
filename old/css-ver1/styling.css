@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:700');
+
+/*	
+	Is 'width' and 'height' needed? Nope - don't think its needed 
+	Onam - Just a base from zeplin
+		subtitle may have redundant code
+		is line-height important? Laura - Yes, it affects the spacing between lines on a paragraph
+*/
+
+h1 {
+	font-family: 'Rubik';
+	font-size: 48px;
+	font-weight: 700;
+	text-align: left;
+	color: #4990e2; /* --dark-blue */
+}
+
+h2 {
+	font-family: Rubik;
+	font-size: 36px;
+    font-weight: 400;
+	text-align: left;
+	color: #4990e2; /* --dark-blue */
+}
+
+h3 {
+	font-family: Rubik;
+	font-size: 32px;
+	font-weight: 500;
+	letter-spacing: 1.5px;
+	text-align: left;
+	color: #4c5561; /* --dark-grey */
+}
+
+p {
+	font-family: Rubik;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.7;
+	letter-spacing: 0.3px;
+	text-align: left;
+	color: #7a899a; /* --grey */
+}
+
+p.subtitle {
+	color: #7a899a; /* --grey */
+}
+
+span {
+	font-family: Rubik;
+	color: #7a899a; /* --grey */
+    font-size: 16px;
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+
+}
+
+
+/*********************** font-colours & positioning ***********************/
+
+.font--white {
+	color: #ffffff; 
+}
+
+.font--orange {
+	color: #ff9a00;
+}
+
+.font-center {
+	text-align: center;
+}
+
+.background--white-heading {
+	background-color: #ffffff;
+    padding: 16px;
+}
+
+.font--quote {
+	font-style: italic;
+	font-size: 24px;
+	padding: 0 16px;
+}
+
+.border--quote {
+	border-left: 3px solid #ff9a00;
+}
+

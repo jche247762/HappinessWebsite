@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Frequently Asked Questions</title>
+		<link href="css/reset.css" rel="stylesheet" />
+		<link href="css/reset.css" rel="stylesheet" />
+		<link href="css/styling.css" rel="stylesheet" />
+		<link href="css/header-and-footer.css" rel="stylesheet" />
+		<link href="css/buttons.css" rel="stylesheet" />
+		<link href="css/padding-and-margin.css" rel="stylesheet" />
+		<link href="css/tile-styles.css" rel="stylesheet" />
+		<link href="css/images.css" rel="stylesheet" />
+		<link href="css/about.css" rel="stylesheet" />
+		<link href="css/login-signup.css" rel="stylesheet" />
+	</head>
+	<body>
+		<!-- header -->
+		<nav>
+    	<p class="logo"><a href="index.html">GetHappy.co</a></p>
+			<ul>
+				<li class="nav-bar">
+					<button class="mbutton" onclick="document.getElementById('login-modal').style.display='block'">
+						Login
+					</button>
+					<div id="login-modal" class="login-modal">
+						<form class="login-modal-content animate" action="/action_page.php" method="post">
+						<div class="login-head">
+							<span onclick="document.getElementById('login-modal').style.display='none'" class="login-modal-close" title="CloseModal">&times;</span>
+							<h2>Login</h2>
+						</div>
+						<div class="login-container">
+							<div>
+								<label>Username</label>
+								<input type="text" name="username" placeholder="Your username here" required>
+							</div>
+							<div class="login-field-password">
+								<label>Password</label>
+								<input type="password" name="password" placeholder="Your password here" required>
+								<span class="password-message"><a href="#">Forgot your password?</a></span>
+							</div>
+							<div class="login-submit">
+								<button type="submit" class="button--text button--center">Login</button>
+							</div>
+							<div class="login-noaccount">
+								<p><span>Don't have an account?</span><a href="signup.html"> Sign Up</a></p>
+							</div>
+						</div>
+					</form>
+				</div>
+				</li>
+		    	<div class="dropdown">
+		        <li class="nav-bar"><a href="research.html">The Research</a></li>
+					  <div class="dropdown-content">
+							<ul>
+							  <li><a href="rsrchphysicalhealth.html">Physical Health</a></li>
+						  <li><a href="rsrchmentalhealth.html">Mental Health</a></li>
+						  <li><a href="rsrchtimeuse.html">Time Use</a></li>
+						  <li><a href="rsrcheducation.html">Education &amp; Work</a></li>
+						  <li><a href="rsrchculture.html">Culture</a></li>
+						  <li><a href="rsrchgovernment.html">Government</a></li>
+						  <li><a href="rsrchrelationships.html">Relationships</a></li>
+						  <li><a href="rsrchfinances.html">Finances</a></li>
+						  <li><a href="rsrchenvironment.html">Environment</a></li>
+							</ul>
+					  </div>
+		    	</div>
+				<li class="nav-bar"><a href="quiz.html">Happiness Quiz</a></li>
+				<li class="nav-bar"><a href="aboutus.html">About Us</a></li>
+			</ul>
+		</nav>
+
+		<!-- main content area -->
+		<section class="background--banner-about background--layout">
+			<div class="center--banner-heading">
+				<div class="background--white-heading">
+					<h1 class="font-center">Frequently Asked Questions</h1>
+				</div>
+			</div>
+		</section>
+		<section class="center--paragraph">
+			<p class="wrapper--padding">You can find a list of our frequently asked questions below.
+			Can’t find an answer to your question? You can email us at <span class="font--blue">hello@gethappy.co.</span>
+      </p>
+
+			<div class="wrapper--padding">
+				<p class="font--blue">Who are you?</p>
+				<p class="font--blue">Is your service free?</p>
+				<p class="font--blue">What do my quiz results mean?</p>
+				<p class="font--blue">Where does your research come from?</p>
+			</div>
+
+			<h3 class="wrapper--padding">Who are you?</h3>
+			<p class="wrapper--padding">We are a group of University of Sydney students interested in the topic of happiness. This website is a group project for INFO1003 Foundations of IT subject. You can find out more on the About Us page.</p>
+
+			<h3 class="wrapper--padding">Is your service free?</h3>
+			<p class="wrapper--padding">Yes, our website is absolutely free! We want as many people as possible to get quality information about happiness. You can also make an account and complete the quiz completely free of charge.</p>
+
+			<h3 class="wrapper--padding">What do my quiz results mean?</h3>
+			<p class="wrapper--padding">The main aim of the quiz is to provide recommendations for the domains you can focus on in order to improve your happiness. The results from your quiz may vary based on your own subjective assessment of your happiness, and we recommend answering as honestly as you can. This quiz is not intended to be an assessment of your mental health and should not replace the advice of a clinical professional.</p>
+
+			<h3 class="wrapper--padding">Where does your research come from?</h3>
+			<p class="wrapper--padding">Our research revolves around the Global National Happiness system used in Bhutan and other measures of global happiness in the world. You can check out our sources below:</p>
+		</section>
+
+    <!-- footer -->
+    <footer>
+      <div>
+        <h5>GetHappy</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="">Sign Up</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="quiz.html">The Happiness Quiz</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>The Research</h5>
+        <ul>
+          <li><a href="research/physicalhealth.html">Physical Health</a></li>
+          <li><a href="research/mentalhealth.html">Mental Health</a></li>
+          <li><a href="research/timeuse.html">Time Use</a></li>
+          <li><a href="">Education &amp; Work</a></li>
+          <li><a href="">Culture</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li><br></li>
+          <li><a href="">Government</a></li>
+          <li><a href="">Relationships</a></li>
+          <li><a href="">Finances</a></li>
+          <li><a href="">Environment</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Help</h5>
+        <ul>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="faqs.html">FAQ</a></li>
+          <li><a href="privacypolicy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <p class="logo">GetHappy.co</p>
+        <p>Get in contact at <strong>hello@gethappy.co</strong></p>
+      </div>
+    </footer>
+	</body>
+</html>

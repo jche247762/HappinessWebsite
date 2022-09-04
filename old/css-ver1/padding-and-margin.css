@@ -1,0 +1,40 @@
+
+section {
+	width: 100vw;
+	height: 480px;
+}
+
+/*this will indent and position each section that contains text*/
+.wrapper--indent {
+    padding: 9% 0 2% 14%;
+    width: 50%;
+    margin-bottom: 10%;
+}
+
+/*this is the paragraph description under each header*/
+.wrapper--indent > p {
+    padding: 24px 0;
+}
+
+/*these class will center the font position vertically*/
+p.font-center {
+	padding: 24px 0;
+	/*text-align: */
+}
+
+.center--content {
+	padding-top: 8%
+}
+
+.center--paragraph {
+	margin: 10% auto;
+    width: 50%;
+    height: 50%;
+}
+
+.center--banner-heading {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

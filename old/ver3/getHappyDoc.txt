@@ -1,0 +1,46 @@
+localStorage being used
+
+ADD TO THIS AS REQUIRED
+
+e.g. FUNCTIONS
+	- localStorage.setItem(key, value); // OR: localStorage.key = value;
+	- localStorage.getItem(key); // OR: localStorage.key;
+	- localStorage.remove(); 
+	- localStorage.setItem(key, JSON.stringify(arr)); 	// to store array 'arr'
+	- var arr = JSON.parse(localStorage.getItem(key)); // to get array which is stored under key
+	
+GENERAL INFO
+
+
+ACCOUNT INFO:
+Includes userid, password, first name, last name, email, gender 
+e.g. userid is "blue52", (key,value) pairs would be:
+	("blue52","password123")	<!-- this is userid and password -->
+	("blue52FirstName","Mike")
+	("blue52LastName","Tyson")
+	("blue52Email","blueunicorn@gmail.com")
+	("blue52Gender","Female") 	<!-- should only be either "Female", "Male" or "Other" -->
+
+GOALS:
+Includes status of all goals (unchecked,checked, or completed)
+e.g. userid is "blue52", set and get would be:
+	localStorage.setItem("blue52Goals", JSON.stringify(statusOfGoals));
+	var statusOfGoals = JSON.parse(localStorage.getItem("names"));
+Initialise using:
+	var statusOfGoals = new Array();
+	for (var i = 0; i < 9; i++){
+		var nestedArr = new Array();
+		for (var j = 0; j < 4; j++){
+			nestedArr[j] = "unchecked";
+		}
+		statusOfGoals[i] = nestedArr;
+	}
+	localStorage.setItem("blue52Goals", JSON.stringify(statusOfGoals));
+
+QUIZ:
+Includes quiz results
+e.g. userid is "blue52", (key,value) pairs would be:
+	("blue52Quiz","23")			<!-- for a score of 23/100 -->
+			OR
+	("blue52Quiz","")			<!-- the user has not take the quiz -->
+	

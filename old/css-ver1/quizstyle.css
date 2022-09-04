@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+/* Onam - need to see checked label */
+
+/* Onam - font too large? changed from 24 to 16px */
+p.question {
+	/*width: 625px;
+	height: 28px;*/
+	margin-top: 30px;
+	margin-bottom: 15px;
+	font-family: Rubik;
+	font-size: 16px;
+	/*font-weight: 500;*/ font-weight: bold;
+	letter-spacing: 0.5px;
+	text-align: left;
+	color: #4c5561; /* --dark-grey */
+}
+
+label {
+	/*width: 150px;
+	height: 28px;*/
+	font-family: Rubik;
+	font-size: 16px;
+	font-weight: 300;
+	letter-spacing: 0.5px;
+	text-align: left;
+	color: rgba(122, 137, 154, 0.5); /* --grey-50 */
+}
+/* Onam - see if some code inside block can be reduced
+		Some code might be redundant	*/
+input[type="radio"]:checked + label {
+	/*width: 101px;
+	height: 28px;*/
+	font-family: Rubik;
+ 	font-size: 16px;
+	letter-spacing: 0.5px;
+	text-align: left;
+	color: #4990e2; /* --dark-blue */
+}

@@ -1,0 +1,50 @@
+/* this file is for the background images */
+
+
+/*The background image for each section*/
+
+.background--layout {
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.background--home-1 {
+ 	background-image: url("../img/banner-home-1.jpg");;
+}
+
+.background--home-2 {
+	background-image: url("../img/banner-hojpg");
+}y-man
+/* Altered image height as image was of a different height */
+
+.background--home-3 {
+	background-image: url("../img/banner-home-3.jpg");	
+	height: 100%;
+}
+
+.background--home-4 {
+	background-image: url("../img/banner-home-4.jpg");	
+}
+
+/*The background images for physical health page*/
+
+.background--banner-physical {
+	background-image: url("../img/banner-physical.jpg");
+}
+
+.background--blue {
+ 	background-color: #62b4f2;
+ 	height: 375px;
+}
+
+/*The background images for mental health page*/
+.background--banner-mental {
+	background-image: url("../img/banner-mental.jpg");
+}
+
+/*The background images for time use page*/
+.background--banner-time {
+	background-image: url("../img/banner-time.jpg");
+}
+
+

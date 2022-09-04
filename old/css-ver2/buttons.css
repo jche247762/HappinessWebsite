@@ -1,0 +1,26 @@
+
+/*Had to change the input buttons as actual buttons -- easier to style the text when its button */
+button {
+	border-radius: 8px;
+	background-color:#fff;
+	padding: 14px 35px;
+	border: none;
+ 	box-shadow: 0 2px 4px 0 rgba(74, 144, 226, 0.5);
+}
+
+/*position a button in the centre*/
+
+.button--center {
+	display: block;
+	margin: 0 auto;
+}
+
+/*use this class for each button*/
+.button--text {
+	font-family: Rubik;
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	text-align: center;
+	color: #4990e2; /* --dark-blue */
+}

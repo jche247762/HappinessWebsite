@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Quiz | GetHappy</title>
+	<link href="css/reset.css" rel="stylesheet" />
+	<link href="css/styling.css" rel="stylesheet" />
+	<link href="css/header-and-footer.css" rel="stylesheet" />
+	<link href="css/buttons.css" rel="stylesheet" />
+	<link href="css/padding-and-margin.css" rel="stylesheet" />
+	<link href="css/tile-styles.css" rel="stylesheet" />
+	<link href="css/images.css" rel="stylesheet" />
+	<link href="css/quizstyle.css" rel="stylesheet" />
+	<link href="css/login-signup.css" rel="stylesheet" />
+	<script src="js/jquery.js"></script>
+	<script src="js/quizranking.js"></script>
+	<script src="js/quizscore.js"></script>
+	<script src="js/login.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<!-- top navigation -->
+	<nav>
+  	<p class="logo"><a href="index.html">GetHappy.co</a></p>
+		<ul>
+				<li class="nav-bar"> <!-- li tags indented one extra to stay in line with li tags surrounded by divs -->
+					<button class="mbutton button--blue" id="loginButton" onclick="document.getElementById('login-modal').style.display='block'">
+						Log In
+					</button>
+					<div id="username" class="dropdown-content font--orange">
+						<ul class="user-account">
+							<li><a href="mygoals.html">Goal Page</a></li>
+							<li><a href="myinfo.html">Account Information</a></li>
+							<li>Sign Out</li>
+						</ul>
+					</div>
+					<!-- login modal -->
+					<div id="login-modal" class="login-modal">
+						<form class="login-modal-content animate" onSubmit="checkLogin()">
+							<div class="login-head">
+								<span onclick="document.getElementById('login-modal').style.display='none'" class="login-modal-close" title="CloseModal">&times;</span>
+								<h2>Log In</h2>
+							</div>
+							<div class="login-container">
+								<div>
+									<label>Username</label>
+									<input type="text" name="username" placeholder="Your username here" id="usernameLogin" required>
+								</div>
+								<div class="login-field-password">
+									<label>Password</label>
+									<input type="password" name="password" placeholder="Your password here" id="passwordLogin" required>
+									<span class="password-message"><a href="#">Forgot your password?</a></span>
+								</div>
+								<div class="login-submit">
+									<button type="submit" class="button--blue button--text button--center">Login</button>
+								</div>
+								<div class="login-noaccount">
+									<p><span>Don't have an account?</span><a href="signup.html"> Sign Up</a></p>
+								</div>
+							</div>
+						</form>
+					</div>
+				</li>
+  		<div class="dropdown">
+      	<li class="nav-bar">
+					<a href="research.html">The Research</a>
+				</li>
+			  <div class="dropdown-content">
+					<ul>
+						<!-- the links are outside so that the link will work when hovered over the box, not just the text -->
+				  	<a href="rsrchphysicalhealth.html"><li>Physical Health</li></a>
+			  		<a href="rsrchmentalhealth.html"><li>Mental Health</li></a>
+			  		<a href="rsrchtimeuse.html"><li>Time Use</li></a>
+			  		<a href="rsrcheducation.html"><li>Education &amp; Work</li></a>
+			  		<a href="rsrchculture.html"><li>Culture</li></a>
+			  		<a href="rsrchgovernment.html"><li>Government</li></a>
+			  		<a href="rsrchrelationships.html"><li>Relationships</li></a>
+			  		<a href="rsrchfinances.html"><li>Finances</li></a>
+			  		<a href="rsrchenvironment.html"><li>Environment</li></a>
+					</ul>
+			  </div>
+  		</div>
+				<li class="nav-bar"><a href="quiz.html">Happiness Quiz</a></li> <!-- li tags indented one extra to stay in line with li tags surrounded by divs -->
+				<li class="nav-bar"><a href="aboutus.html">About Us</a></li>
+		</ul>
+	</nav>
+	
+	<!--Main Content-->
+
+	<section class="background--layout" style="background-image: url('img/banner-quiz.jpg')">
+		<div class="center--banner-heading">
+			<div class="background--white-heading">
+				<h1 class="font-center">Happiness Quiz</h1>
+			</div>
+		</div>
+	</section>
+
+	<div class="center--paragraph">
+		<p>Complete this quiz to get personalised tips on areas your happiness can be improved. Our recommendations are based on the nine domains of happiness used in Bhutan’s Global National Happiness Index, and cover a range of individual and societal factors.</p>
+
+		<form action="quizresults.html" method="post" id="quiz" class="form--quiz">
+			<!-- Mental Health -->
+			<div class="quiz--question--bundle">
+				<p class="quiz--question">To what extent do you feel positive about yourself?</p>
+				<input type="radio" name="q1" id="q1_4" value="4" required/>
+				<label for="q1_4">To a great extent</label><br/>
+				<input type="radio" name="q1" id="q1_3" value="3"/>
+				<label for="q1_3">Quite a bit</label><br/>
+				<input type="radio" name="q1" id="q1_2" value="2"/>
+				<label for="q1_2">Somewhat</label><br/>
+				<input type="radio" name="q1" id="q1_1" value="1"/>
+				<label for="q1_1">Very little</label><br/>
+				<input type="radio" name="q1" id="q1_0" value="0"/>
+				<label for="q1_0">Not at all</label><br/>
+			</div>
+			<div class="quiz--question--bundle">
+				<p class="quiz--question">To what extent are you engaged and interested in your daily life?</p>
+				<input type="radio" name="q2" id="q2_4" value="4" required/>
+				<label for="q2_4">To a great extent</label><br/>
+				<input type="radio" name="q2" id="q2_3" value="3"/>
+				<label for="q2_3">Quite a bit</label><br/>
+				<input type="radio" name="q2" id="q2_2" value="2"/>
+				<label for="q2_2">Somewhat</label><br/>
+				<input type="radio" name="q2" id="q2_1" value="1"/>
+				<label for="q2_1">Very little</label><br/>
+				<input type="radio" name="q2" id="q2_0" value="0"/>
+				<label for="q2_0">Not at all</label><br/>
+			</div>
+			<!-- Physical Health -->
+			<div class="quiz--question--bundle">
+				<p class="quiz--question">How satisfied are you with your current health?</p>
+				<input type="radio" name="q3" id="q3_4" value="4" required/>
+				<label for="q3_4">Very Satisfied</label><br/>
+				<input type="radio" name="q3" id="q3_3" value="3"/>
+				<label for="q3_3">Satisfied</label><br/>
+				<input type="radio" name="q3" id="q3_2" value="2"/>
+				<label for="q3_2">Neither satisfied nor dissatisfied</label><br/>
+				<input type="radio" name="q3" id="q3_1" value="1"/>
+				<label for="q3_1">Dissatisfied</label><br/>
+				<input type="radio" name="q3" id="q3_0" value="0"/>
+				<label for="q3_0">Very dissatisfied</label><br/>
+			</div>
+			<div class="quiz--question--bundle">
+				<p class="quiz--question">How often do you feel energised?</p>
+				<input type="radio" name="q4" id="q4_4" value="4" required/>
+				<label for="q4_4">Always</label><br/>
+				<input type="radio" name="q4" id="q4_3" value="3"/>
+				<label for="q4_3">Often</label><br/>
+				<input type="radio" name="q4" id="q4_2" value="2"/>
+				<label for="q4_2">Sometimes</label><br/>
+				<input type="radio" name="q4" id="q4_1" value="1"/>
+				<label for="q4_1">Rarely</label><br/>
+				<input type="radio" name="q4" id="q4_0" value="0"/>
+				<label for="q4_0">Never</label><br/>
+			</div>
+			<!-- Time Use -->
+			<div class="quiz--question--bundle">
+				<p class="quiz--question">How often are you able to spend time doing what you enjoy?</p>
+				<input type="radio" name="q5" id="q5_4" value="4" required/>
+				<label for="q5_4">Always</label><br/>
+				<input type="radio" name="q5" id="q5_3" value="3"/>
+				<label for="q5_3">Often</label><br/>
+				<input type="radio" name="q5" id="q5_2" value="2"/>
+				<label for="q5_2">Sometimes</label><br/>
+				<input type="radio" name="q5" id="q5_1" value="1"/>
+				<label for="q5_1">Rarely</label><br/>
+				<input type="radio" name="q5" id="q5_0" value="0"/>
+				<label for="q5_0">Never</label><br/>
+			</div>
+			<div class="quiz--question--bundle">
+				<p class="quiz--question">How satisfied are you with the amount of sleep you get?</p>
+				<input type="radio" name="q6" id="q6_4" value="4" required/>
+				<label for="q6_4">Very Satisfied</label><br/>
+				<input type="radio" name="q6" id="q6_3" value="3"/>
+				<label for="q6_3">Satisfied</label><br/>
+				<input type="radio" name="q6" id="q6_2" value="2"/>
+				<label for="q6_2">Neither satisfied nor dissatisfied</label><br/>
+				<input type="radio" name="q6" id="q6_1" value="1"/>
+				<label for="q6_1">Dissatisfied</label><br/>
+				<input type="radio" name="q6" id="q6_0" value="0"/>
+				<label for="q6_0">Very dissatisfied</label><br/>
+			</div>
+			<!-- Work/Education -->
+			<div class="quiz--question--bundle">
+				<p class="quiz--question">How satisfied are you that your work and/or studies are meaningful?</p>
+				<input type="radio" name="q7" id="q7_4" value="4" required/>
+				<label for="q7_4">Very Satisfied</label><br/>
+				<input type="radio" name="q7" id="q7_3" value="3"/>
+				<label for="q7_3">Satisfied</label><br/>
+				<input type="radio" name="q7" id="q7_2" value="2"/>
+				<label for="q7_2">Neither satisfied nor dissatisfied</label><br/>
+				<input type="radio" name="q7" id="q7_1" value="1"/>
+				<label for="q7_1">Dissatisfied</label><br/>
+				<input type="radio" name="q7" id="q7_0" value="0"/>
+				<label for="q7_0">Very dissatisfied</label><br/>
+			</div>
+			<div class="quiz--question--bundle">
+				<p class="quiz--question">To what extent do you feel competent in your work and/or studies?</p>
+				<input type="radio" name="q8" id="q8_4" value="4" required/>
+				<label for="q8_4">To a great extent</label><br/>
+				<input type="radio" name="q8" id="q8_3" value="3"/>
+				<label for="q8_3">Quite a bit</label><br/>
+				<input type="radio" name="q8" id="q8_2" value="2"/>
+				<label for="q8_2">Somewhat</label><br/>
+				<input type="radio" name="q8" id="q8_1" value="1"/>
+				<label for="q8_1">Very little</label><br/>
+				<input type="radio" name="q8" id="q8_0" value="0"/>
+				<label for="q8_0">Not at all</label><br/>
+			</div>
+			<!-- Culture -->
+			<div class="quiz--question--bundle">
+				<p class="quiz--question">To what extent do you feel your values align with those in your community?</p>
+				<input type="radio" name="q9" id="q9_4" value="4" required/>
+				<label for="q9_4">To a great extent</label><br/>
+				<input type="radio" name="q9" id="q9_3" value="3"/>
+				<label for="q9_3">Quite a bit</label><br/>
+				<input type="radio" name="q9" id="q9_2" value="2"/>
+				<label for="q9_2">Somewhat</label><br/>
+				<input type="radio" name="q9" id="q9_1" value="1"/>
+				<label for="q9_1">Very little</label><br/>
+				<input type="radio" name="q9" id="q9_0" value="0"/>
+				<label for="q9_0">Not at all</label><br/>
+			</div>
+			<div class="quiz--question--bundle">
+				<p class="quiz--question">To what extent do you have access to meaningful cultural events or activities?</p>
+				<input type="radio" name="q10" id="q10_4" value="4" required/>
+				<label for="q10_4">To a great extent</label><br/>
+				<input type="radio" name="q10" id="q10_3" value="3"/>
+				<label for="q10_3">Quite a bit</label><br/>
+				<input type="radio" name="q10" id="q10_2" value="2"/>
+				<label for="q10_2">Somewhat</label><br/>
+				<input type="radio" name="q10" id="q10_1" value="1"/>
+				<label for="q10_1">Very little</label><br/>
+				<input type="radio" name="q10" id="q10_0" value="0"/>
+				<label for="q10_0">Not at all</label><br/>
+			</div>
+			<!-- Government -->
+			<div class="quiz--question--bundle">
+				<p class="quiz--question">How satisfied are you with the performance of your government?</p>
+				<input type="radio" name="q11" id="q11_4" value="4" required/>
+				<label for="q11_4">Very Satisfied</label><br/>
+				<input type="radio" name="q11" id="q11_3" value="3"/>
+				<label for="q11_3">Satisfied</label><br/>
+				<input type="radio" name="q11" id="q11_2" value="2"/>
+				<label for="q11_2">Neither satisfied nor dissatisfied</label><br/>
+				<input type="radio" name="q11" id="q11_1" value="1"/>
+				<label for="q11_1">Dissatisfied</label><br/>
+				<input type="radio" name="q11" id="q11_0" value="0"/>
+				<label for="q11_0">Very dissatisfied</label><br/>
+			</div>
+			<div class="quiz--question--bundle">
+				<p class="quiz--question">To what extent do your public officials pay attention to what people think?</p>
+				<input type="radio" name="q12" id="q12_4" value="4" required/>
+				<label for="q12_4">To a great extent</label><br/>
+				<input type="radio" name="q12" id="q12_3" value="3"/>
+				<label for="q12_3">Quite a bit</label><br/>
+				<input type="radio" name="q12" id="q12_2" value="2"/>
+				<label for="q12_2">Somewhat</label><br/>
+				<input type="radio" name="q12" id="q12_1" value="1"/>
+				<label for="q12_1">Very little</label><br/>
+				<input type="radio" name="q12" id="q12_0" value="0"/>
+				<label for="q12_0">Not at all</label><br/>
+			</div>
+			<!-- Relationships and Community -->
+			<div class="quiz--question--bundle">
+				<p class="quiz--question">To what extent do you feel there are people around who care about you?</p>
+				<input type="radio" name="q13" id="q13_4" value="4" required/>
+				<label for="q13_4">To a great extent</label><br/>
+				<input type="radio" name="q13" id="q13_3" value="3"/>
+				<label for="q13_3">Quite a bit</label><br/>
+				<input type="radio" name="q13" id="q13_2" value="2"/>
+				<label for="q13_2">Somewhat</label><br/>
+				<input type="radio" name="q13" id="q13_1" value="1"/>
+				<label for="q13_1">Very little</label><br/>
+				<input type="radio" name="q13" id="q13_0" value="0"/>
+				<label for="q13_0">Not at all</label><br/>
+			</div>
+			<div class="quiz--question--bundle">
+				<p class="quiz--question">How often do you feel lonely?</p>
+				<input type="radio" name="q14" id="q14_4" value="0" required/>
+				<label for="q14_4">Always</label><br/>
+				<input type="radio" name="q14" id="q14_3" value="1"/>
+				<label for="q14_3">Often</label><br/>
+				<input type="radio" name="q14" id="q14_2" value="2"/>
+				<label for="q14_2">Sometimes</label><br/>
+				<input type="radio" name="q14" id="q14_1" value="3"/>
+				<label for="q14_1">Rarely</label><br/>
+				<input type="radio" name="q14" id="q14_0" value="4"/>
+				<label for="q14_0">Never</label><br/>
+			</div>
+			<!-- The Environment -->
+			<div class="quiz--question--bundle">
+				<p class="quiz--question">How satisfied are you with the state of the natural environment in your area?</p>
+				<input type="radio" name="q15" id="q15_4" value="4" required/>
+				<label for="q15_4">Very Satisfied</label><br/>
+				<input type="radio" name="q15" id="q15_3" value="3"/>
+				<label for="q15_3">Satisfied</label><br/>
+				<input type="radio" name="q15" id="q15_2" value="2"/>
+				<label for="q15_2">Neither satisfied nor dissatisfied</label><br/>
+				<input type="radio" name="q15" id="q15_1" value="1"/>
+				<label for="q15_1">Dissatisfied</label><br/>
+				<input type="radio" name="q15" id="q15_0" value="0"/>
+				<label for="q15_0">Very dissatisfied</label><br/>
+			</div>
+			<div class="quiz--question--bundle">
+				<p class="quiz--question">To what extent do you feel responsible over the environment in your area?</p>
+				<input type="radio" name="q16" id="q16_4" value="4" required/>
+				<label for="q16_4">To a great extent</label><br/>
+				<input type="radio" name="q16" id="q16_3" value="3"/>
+				<label for="q16_3">Quite a bit</label><br/>
+				<input type="radio" name="q16" id="q16_2" value="2"/>
+				<label for="q16_2">Somewhat</label><br/>
+				<input type="radio" name="q16" id="q16_1" value="1"/>
+				<label for="q16_1">Very little</label><br/>
+				<input type="radio" name="q16" id="q16_0" value="0"/>
+				<label for="q16_0">Not at all</label><br/>
+			</div>
+			<!-- Standard of Living -->
+			<div class="quiz--question--bundle">
+				<p class="quiz--question">To what extent do you worry about your personal finances?</p>
+				<input type="radio" name="q17" id="q17_4" value="0" required/>
+				<label for="q17_4">To a great extent</label><br/>
+				<input type="radio" name="q17" id="q17_3" value="1"/>
+				<label for="q17_3">Quite a bit</label><br/>
+				<input type="radio" name="q17" id="q17_2" value="2"/>
+				<label for="q17_2">Somewhat</label><br/>
+				<input type="radio" name="q17" id="q17_1" value="3"/>
+				<label for="q17_1">Very little</label><br/>
+				<input type="radio" name="q17" id="q17_0" value="4"/>
+				<label for="q17_0">Not at all</label><br/>
+			</div>
+			<div class="quiz--question--bundle">
+				<p class="quiz--question">How satisfied are you that you have money to buy what you want?</p>
+				<input type="radio" name="q18" id="q18_4" value="4" required/>
+				<label for="q18_4">Very Satisfied</label><br/>
+				<input type="radio" name="q18" id="q18_3" value="3"/>
+				<label for="q18_3">Satisfied</label><br/>
+				<input type="radio" name="q18" id="q18_2" value="2"/>
+				<label for="q18_2">Neither satisfied nor dissatisfied</label><br/>
+				<input type="radio" name="q18" id="q18_1" value="1"/>
+				<label for="q18_1">Dissatisfied</label><br/>
+				<input type="radio" name="q18" id="q18_0" value="0"/>
+				<label for="q18_0">Very dissatisfied</label><br/>
+			</div>
+			<!--<input type="submit" value="Submit" class="button--center button--text"/>-->
+		</form>
+		<button value='score' class="button--center" onclick="score()">
+			<span class="button--text">Submit</span>
+		</button>
+	</div>
+
+	<!-- footer -->
+	<footer>
+    <div>
+      <h5>GetHappy</h5>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="signup.html">Sign Up</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="quiz.html">The Happiness Quiz</a></li>
+			</ul>
+    </div>
+  	<div>
+			<h5>The Research</h5>
+			<ul>
+				<li><a href="rsrchphysicalhealth.html">Physical Health</a></li>
+				<li><a href="rsrchmentalhealth.html">Mental Health</a></li>
+				<li><a href="rsrchtimeuse.html">Time Use</a></li>
+				<li><a href="rsrcheducation.html">Education &amp; Work</a></li>
+				<li><a href="rsrchculture.html">Culture</a></li>
+    	</ul>
+  	</div>
+	  <div>
+      <ul>
+      	<li><br></li>
+				<li><a href="rsrchgovernment.html">Government</a></li>
+				<li><a href="rsrchrelationships.html">Relationships</a></li>
+				<li><a href="rsrchfinances.html">Finances</a></li>
+				<li><a href="rsrchenvironment.html">Environment</a></li>
+			</ul>
+	  </div>
+  	<div>
+			<h5>Help</h5>
+			<ul>
+				<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="feedback.html">Feedback</a></li>
+				<li><a href="faqs.html">FAQ</a></li>
+				<li><a href="privacypolicy.html">Privacy Policy</a></li>
+			</ul>
+  	</div>
+ 		<div class="bottom">
+    	<a href="index.html"><p class="logo">GetHappy.co</p></a>
+			<p>Get in contact at <strong>hello@gethappy.co</strong></p>
+  	</div>
+	</footer>
+</body>
+</html>

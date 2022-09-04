@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>About Us | GetHappy</title>
+		<link href="css/reset.css" rel="stylesheet" />
+		<link href="css/styling.css" rel="stylesheet" />
+		<link href="css/header-and-footer.css" rel="stylesheet" />
+		<link href="css/buttons.css" rel="stylesheet" />
+		<link href="css/padding-and-margin.css" rel="stylesheet" />
+		<link href="css/tile-styles.css" rel="stylesheet" />
+		<link href="css/images.css" rel="stylesheet" />
+		<link href="css/about.css" rel="stylesheet" />
+		<link href="css/login-signup.css" rel="stylesheet" />
+	</head>
+	<body>
+    <!-- header -->
+		<nav>
+    	<p class="logo"><a href="index.html">GetHappy.co</a></p>
+			<ul>
+				<li class="nav-bar">
+					<button class="mbutton" onclick="document.getElementById('login-modal').style.display='block'">
+						Login
+					</button>
+					<div id="login-modal" class="login-modal">
+						<form class="login-modal-content animate" action="/action_page.php" method="post">
+						<div class="login-head">
+							<span onclick="document.getElementById('login-modal').style.display='none'" class="login-modal-close" title="CloseModal">&times;</span>
+							<h2>Login</h2>
+						</div>
+						<div class="login-container">
+							<div>
+								<label>Username</label>
+								<input type="text" name="username" placeholder="Your username here" required>
+							</div>
+							<div class="login-field-password">
+								<label>Password</label>
+								<input type="password" name="password" placeholder="Your password here" required>
+								<span class="password-message"><a href="#">Forgot your password?</a></span>
+							</div>
+							<div class="login-submit">
+								<button type="submit" class="button--text button--center">Login</button>
+							</div>
+							<div class="login-noaccount">
+								<p><span>Don't have an account?</span><a href="signup.html"> Sign Up</a></p>
+							</div>
+						</div>
+					</form>
+				</div>
+				</li>
+		    	<div class="dropdown">
+		        <li class="nav-bar"><a href="research.html">The Research</a></li>
+					  <div class="dropdown-content">
+							<ul>
+							  <li><a href="rsrchphysicalhealth.html">Physical Health</a></li>
+						  <li><a href="rsrchmentalhealth.html">Mental Health</a></li>
+						  <li><a href="rsrchtimeuse.html">Time Use</a></li>
+						  <li><a href="rsrcheducation.html">Education &amp; Work</a></li>
+						  <li><a href="rsrchculture.html">Culture</a></li>
+						  <li><a href="rsrchgovernment.html">Government</a></li>
+						  <li><a href="rsrchrelationships.html">Relationships</a></li>
+						  <li><a href="rsrchfinances.html">Finances</a></li>
+						  <li><a href="rsrchenvironment.html">Environment</a></li>
+							</ul>
+					  </div>
+		    	</div>
+				<li class="nav-bar"><a href="quiz.html">Happiness Quiz</a></li>
+				<li class="nav-bar"><a href="aboutus.html">About Us</a></li>
+			</ul>
+		</nav>
+
+    <!-- main content area -->
+		<section class="background--banner-physical background--layout">
+			<div class="center--banner-heading">
+				<div class="background--white-heading">
+					<h1 class="font--orange font-center">Education &amp; Work</h1>
+				</div>
+			</div>
+		</section>
+		<div class="center--paragraph">
+			<p><span class="font--orange font-first-sentence">Education contributes to the knowledge, values, creativity, skills, human capital, and civic sensibility of citizens.</span> It strongly boosts a nation’s economy and enables efficient and wise decision-making. T. S. Powdyel (2004) aptly puts “… knowledge will decide the quality and destiny of nations.”</p>
+			<div class="border--quote">
+				<p class="font--quote font--orange">“Education qualification is found to positively impact the quality of life experienced by people”</p>
+			</div>
+			<p>Education qualification is found to positively impact the quality of life experienced by people although the degree of impact differs across countries (Doh S. Shinn 1986). A study by Culvert Group, Ltd. and Hazel Henderson in their Culvert-Henderson Quality of Life Indicators study found that individuals with lower literacy skills were much more likely to be living in poverty than individuals with higher literacy skills. The same study also found that people with higher level of literacy skills are </p>
+		</div>
+		<section class="background--blue">
+			<div class="tile--heading">
+				<h2 class="font--white font-center">Practical Steps</h2>
+			</div>
+			<ul class="tile--layout-step">
+				<li class="tile--single-step">
+					<div class="tile--content">
+						<p class="tile--text">Re-think learning. Book learning is one method but there are other ways to learn, take a new hobby</p>
+						<!-- might have to use <button>/bootstrap icons if we want to include icons-->
+						<!--<button><img src="img/plus.png">Add to my goals</button>-->
+						<button class="tile--button-text">Add to my goals</button>
+					</div>
+				</li>
+				<li class="tile--single-step">
+					<div class="tile--content">
+						<p class="tile--text">Break out of your comfort zone. Learn another perspective.</p>
+						<button class="tile--button-text">Add to my goals</button>
+					</div>
+				</li>
+				<li class="tile--single-step">
+					<div class="tile--content">
+						<p class="tile--text">Get in touch with your core values.</p>
+						<button class="tile--button-text">Add to my goals</button>
+				    </div>
+				</li>
+				<li class="tile--single-step">
+					<div class="tile--content">
+						<p class="tile--text">Go somewhere where you haven’t been to before.</p>
+						<button class="tile--button-text">Add to my goals</button>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<!-- footer -->
+		<footer>
+	      <div>
+	        <h5>GetHappy</h5>
+	  			<ul>
+	  				<li><a href="index.html">Home</a></li>
+	  				<li><a href="signup.html">Sign Up</a></li>
+	  				<li><a href="aboutus.html">About Us</a></li>
+	  				<li><a href="quiz.html">The Happiness Quiz</a></li>
+	  			</ul>
+	      </div>
+      	<div>
+  			<h5>The Research</h5>
+  			<ul>
+  				<li><a href="physicalhealth.html">Physical Health</a></li>
+  				<li><a href="mentalhealth.html">Mental Health</a></li>
+  				<li><a href="timeuse.html">Time Use</a></li>
+  				<li><a href="education.html">Education &amp; Work</a></li>
+  				<li><a href="rsrchculture.html">Culture</a></li>
+        	</ul>
+      	</div>
+	    <div>
+	        <ul>
+  				<li><a href="government.html">Government</a></li>
+  				<li><a href="relationships.html">Relationships</a></li>
+  				<li><a href="finances.html">Finances</a></li>
+  				<li><a href="environment.html">Environment</a></li>
+	  		</ul>
+	    </div>
+      	<div>
+  			<h5>Help</h5>
+  			<ul>
+  				<li><a href="feedback.html">Feedback</a></li>
+  				<li><a href="faqs.html">FAQ</a></li>
+  				<li><a href="privacypolicy.html">Privacy Policy</a></li>
+  			</ul>
+      	</div>
+     	<div class="bottom">
+        	<p class="logo">GetHappy.co</p>
+			<p>Get in contact at <strong>hello@gethappy.co</strong></p>
+      	</div>
+	</footer>
+	</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>About Us | GetHappy</title>
+		<link href="css/reset.css" rel="stylesheet" />
+		<link href="css/styling.css" rel="stylesheet" />
+		<link href="css/header-and-footer.css" rel="stylesheet" />
+		<link href="css/buttons.css" rel="stylesheet" />
+		<link href="css/padding-and-margin.css" rel="stylesheet" />
+		<link href="css/tile-styles.css" rel="stylesheet" />
+		<link href="css/images.css" rel="stylesheet" />
+		<link href="css/about.css" rel="stylesheet" />
+		<link href="css/login-signup.css" rel="stylesheet" />
+	</head>
+	<body>
+    <!-- header -->
+		<nav>
+    	<p class="logo"><a href="index.html">GetHappy.co</a></p>
+			<ul>
+				<li class="nav-bar">
+					<button class="mbutton" onclick="document.getElementById('login-modal').style.display='block'">
+						Login
+					</button>
+					<div id="login-modal" class="login-modal">
+						<form class="login-modal-content animate" action="/action_page.php" method="post">
+						<div class="login-head">
+							<span onclick="document.getElementById('login-modal').style.display='none'" class="login-modal-close" title="CloseModal">&times;</span>
+							<h2>Login</h2>
+						</div>
+						<div class="login-container">
+							<div>
+								<label>Username</label>
+								<input type="text" name="username" placeholder="Your username here" required>
+							</div>
+							<div class="login-field-password">
+								<label>Password</label>
+								<input type="password" name="password" placeholder="Your password here" required>
+								<span class="password-message"><a href="#">Forgot your password?</a></span>
+							</div>
+							<div class="login-submit">
+								<button type="submit" class="button--text button--center">Login</button>
+							</div>
+							<div class="login-noaccount">
+								<p><span>Don't have an account?</span><a href="signup.html"> Sign Up</a></p>
+							</div>
+						</div>
+					</form>
+				</div>
+				</li>
+		    	<div class="dropdown">
+		        <li class="nav-bar"><a href="research.html">The Research</a></li>
+					  <div class="dropdown-content">
+							<ul>
+							  <li><a href="rsrchphysicalhealth.html">Physical Health</a></li>
+						  <li><a href="rsrchmentalhealth.html">Mental Health</a></li>
+						  <li><a href="rsrchtimeuse.html">Time Use</a></li>
+						  <li><a href="rsrcheducation.html">Education &amp; Work</a></li>
+						  <li><a href="rsrchculture.html">Culture</a></li>
+						  <li><a href="rsrchgovernment.html">Government</a></li>
+						  <li><a href="rsrchrelationships.html">Relationships</a></li>
+						  <li><a href="rsrchfinances.html">Finances</a></li>
+						  <li><a href="rsrchenvironment.html">Environment</a></li>
+							</ul>
+					  </div>
+		    	</div>
+				<li class="nav-bar"><a href="quiz.html">Happiness Quiz</a></li>
+				<li class="nav-bar"><a href="aboutus.html">About Us</a></li>
+			</ul>
+		</nav>
+
+
+<!-- main content area -->
+		<section class="background--banner-time background--layout">
+			<div class="center--banner-heading">
+				<div class="background--white-heading">
+					<h1 class="font--orange font-center">Time Use</h1>
+				</div>
+			</div>
+		</section>
+		<div class="center--paragraph">
+			<p><span class="font--orange font-first-sentence">Time is an important resource for everyone. It is also a limited resource in that we have only 24 hours in a day to put to competing uses </span>How we use this limited resource is important and has implications for our economic and social well-being.<p>
+			<div class="border--quote">
+				<p class="font--quote font--orange">Imbalance in time allocation between work and other activities is caused by a number of factors among which the increased number of work hours is the most prominent.</p>
+			</div>
+			<p>Previous time use studies provide information on the work-life balance of individuals in society. They provide information on the number of hours an individual spends on work and other activities, such as socializing with family and friends, sports, and other leisure activities.
+			<p>Imbalance in time allocation between work and other activities is caused by a number of factors among which the increased number of work hours is the most prominent. An increase in work hours, in turn, is, among other factors, caused by one’s desire to make more money.</p>
+			
+		</div>
+		<section class="background--blue">
+			<div class="tile--heading">
+				<h2 class="font--white font-center">Practical Steps</h2>
+			</div>
+			<ul class="tile--layout-step">
+				<li class="tile--single-step">
+					<div class="tile--content">
+						<p class="tile--text">Schedule downtime. Schedule some me time and keep it unless there is a real emergency.</p>
+						<button class="tile--button-text">Add to my goals</button>
+					</div>
+				</li>
+				<li class="tile--single-step">
+					<div class="tile--content">
+						<p class="tile--text">Help others. Some say the key to happiness is helping others.</p>
+						<button class="tile--button-text">Add to my goals</button>
+					</div>
+				</li>
+				<li class="tile--single-step">
+					<div class="tile--content">
+						<p class="tile--text">Get picky. learn to savour life. This means slowing down so you have time to enjoy the moment.</p>
+						<button class="tile--button-text">Add to my goals</button>
+					</div>
+				</li>
+				<li class="tile--single-step" >
+					<div class="tile--content">
+						<p class="tile--text">Sleep and exercise. Get enough sleep. You will have more energy and are more efficient.</p>
+						<button class="tile--button-text">Add to my goals</button>
+					</div>
+				</li>
+			</ul>
+		</section>
+
+    <!-- footer -->
+		<footer>
+      <div>
+        <h5>GetHappy</h5>
+  			<ul>
+  				<li><a href="index.html">Home</a></li>
+  				<li><a href="">Sign Up</a></li>
+  				<li><a href="aboutus.html">About Us</a></li>
+  				<li><a href="quiz.html">The Happiness Quiz</a></li>
+  			</ul>
+      </div>
+      <div>
+  			<h5>The Research</h5>
+  			<ul>
+  				<li><a href="physicalhealth.html">Physical Health</a></li>
+  				<li><a href="mentalhealth.html">Mental Health</a></li>
+  				<li><a href="timeuse.html">Time Use</a></li>
+  				<li><a href="">Education &amp; Work</a></li>
+  				<li><a href="">Culture</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li><br></li>
+  				<li><a href="">Government</a></li>
+  				<li><a href="">Relationships</a></li>
+  				<li><a href="">Finances</a></li>
+  				<li><a href="">Environment</a></li>
+  			</ul>
+      </div>
+      <div>
+  			<h5>Help</h5>
+  			<ul>
+  				<li><a href="feedback.html">Feedback</a></li>
+  				<li><a href="faqs.html">FAQ</a></li>
+  				<li><a href="privacypolicy.html">Privacy Policy</a></li>
+  			</ul>
+      </div>
+      <div class="bottom">
+        <p class="logo">GetHappy.co</p>
+			  <p>Get in contact at <strong>hello@gethappy.co</strong></p>
+      </div>
+		</footer>
+	</body>
+</html>

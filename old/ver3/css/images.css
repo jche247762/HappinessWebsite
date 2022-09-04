@@ -1,0 +1,77 @@
+/* this file is for the background images */
+
+
+/*The background image for each section*/
+
+.background--layout {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	height: 320px;
+  /*background-size: 100% 100%;*/
+}
+
+.background--home-1 {
+ 	background-image: url("../img/banner-home-1.jpg");
+}
+
+.background--home-2 {
+	background-image: url("../img/banner-home-2.jpg");
+}
+/* Altered image height as image was of a different height */
+
+.background--home-3 {
+	background-image: url("../img/banner-home-3.jpg");
+}
+
+.background--home-4 {
+	background-image: url("../img/banner-home-4.jpg");
+}
+
+/*The background images for physical health page*/
+
+.background--banner-physical {
+	background-image: url("../img/banner-physical.jpg");
+	height: 350px;
+}
+
+.background--blue {
+ 	background-color: #62b4f2;
+ 	height: 375px;
+}
+
+.background--grey {
+ 	background-color: #e0e7f0;;
+ 	height: 378px;
+}
+
+/*The background images for mental health page*/
+.background--banner-mental {
+	background-image: url("../img/banner-mental.jpg");
+	height: 350px;
+}
+
+/*The background images for time use page*/
+.background--banner-time {
+	background-image: url("../img/banner-time.jpg");
+	height: 350px;
+}
+
+.background--banner-about {
+	background-image: url("../img/banner-about.jpg");
+	height: 350px;
+}
+
+.background--banner-government {
+	background-image: url("../img/government@3x.png");
+	height: 350px;
+}
+
+.background--about {
+    background-image: url("../img/About.jpg");
+}
+
+.background--banner-feedback {
+    background-image: url("../img/banner-feedback.jpg")
+}
+

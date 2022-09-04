@@ -1,0 +1,229 @@
+/****************************** header styles ******************************/
+
+.header {
+	width: 100%;
+	height: 76px;
+	background-color: #fff;
+	box-shadow: 0 2px 4px 0 #abcef6;
+}
+
+/****************************** nav bar styles ******************************/
+
+nav {
+	height: 76px;
+	background-color: #fff;
+	box-shadow: 0 2px 4px 0 #abcef6;
+	padding: 0 14%;
+	position: relative;
+	z-index: 1;
+}
+
+nav a {
+	text-decoration: none;
+	color: #4990e2;
+}
+
+nav p.logo {
+	position: relative;
+	padding: 20px 0 16px;
+}
+
+nav a:hover {
+	color: #62b4f2;
+}
+
+.logo {
+	font-size: 24px;
+	font-weight: bold;
+	display: block;
+	float: left;
+}
+
+nav ul li.nav-bar {
+	list-style-type: none;
+	display: inline-block;
+	float: right;
+	padding: 32px 16px 28px;
+}
+
+nav .mbutton {
+	padding: 6px 14px;
+	font-size: 16px;
+	color: #4990e2;
+	position: relative;
+	top: -10px;
+}
+
+.dropdown .dropdown-content {
+	display: none;
+	position: absolute;
+	top: 75px;
+	right: 210px;
+	box-shadow: 0 2px 4px 0 #abcef6;
+}
+
+.dropdown:hover a {
+	color: #62b4f2;
+}
+
+.dropdown:hover div.dropdown-content {
+    display: block;
+}
+
+nav .dropdown-content ul li {
+	list-style: none;
+	display: block;
+	text-align: left;
+	padding: 13.5px 16px;
+	width: 175px;
+	height: 14px;
+	background-color: #fff;
+}
+
+nav .dropdown-content ul li:hover {
+	background-color: rgb(247, 251, 254);
+}
+
+/*
+nav ul {
+	list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fff;
+	color: #4990e2;
+}
+
+nav a {
+	text-decoration: none;
+	display: block;
+}
+
+nav a:hover, .dropdown:hover .dropbtn {
+    color: #62b4f2;
+}
+
+nav li {
+	float: right;
+}
+
+nav {
+	background-color: #fff;
+	box-shadow: 0 2px 4px 0 #abcef6;
+}
+
+/* I changed the menu to what's down below but now the dropdown doens't work for the research */
+/*nav .menu {
+	position: relative;
+	top: 7px;
+	/*left: 450px;
+	/*left: 35%;
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+nav .dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+nav .dropdown-content a:hover {
+	background-color: #f1f1f1
+}
+nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav .mbutton {
+  	display: inline-block;
+	position: relative;
+	top: 7px;
+	left: 1150%;
+  	padding: 10px 20px;
+  	font-size: 15px;
+  	cursor: pointer;
+  	text-align: center;
+  	text-decoration: none;
+  	color: #OOO;
+  	background-color: #fff;
+ 	border-radius: 5px;
+  	box-shadow: 1px 1px 1px 1px #abcef6
+}
+
+.mbutton:hover {background-color: #abcef6}
+
+.mbutton:active {
+  background-color: #abcef6;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+*/
+
+
+
+
+
+
+/****************************** footer styles ******************************/
+/* color won't come without width and height
+	but webpage is then fixed to that width
+	(needs scrolling if browser width is lower)
+	problem or not? Laura - can't see this problem occurring?							*/
+footer {
+	/*height: 381px;*/
+	height: 200px;
+	background-color: #4c5661;
+	padding: 42px 5%;
+}
+footer div {
+	display: block;
+	float: left;
+	width: 25%;
+}
+footer ul {
+	list-style: none;
+}
+footer h5, footer a, footer p {
+	font-size: 12px;
+	letter-spacing: 1px;
+	line-height: 2.19;
+	text-align: left;
+	color: #ffffff;
+}
+footer h5 {
+	font-weight: 500;
+}
+footer a {
+	text-decoration: none;
+	font-weight: 300;
+}
+footer a:hover {
+	text-decoration: underline;
+}
+footer p strong {
+	font-weight: 500;
+}
+footer div.bottom {
+	clear: left;
+	width: 100%;
+}
+footer div.bottom p {
+	width: 50%;
+	display: block;
+	float: left;
+}
+footer .logo {
+	color: #ffffff;
+}
+footer div.bottom p:nth-child(2) {
+	position: relative;
+	top: 13px;
+	text-align: right;
+}
