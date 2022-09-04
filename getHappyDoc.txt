@@ -1,0 +1,83 @@
+localStorage being used
+
+ADD TO THIS AS REQUIRED
+
+e.g. FUNCTIONS
+	- localStorage.setItem(key, value); // OR: localStorage.key = value;
+	- localStorage.getItem(key); // OR: localStorage.key;
+	- localStorage.remove();
+	- localStorage.setItem(key, JSON.stringify(arr)); 	// to store array 'arr'
+	- var arr = JSON.parse(localStorage.getItem(key)); // to get array which is stored under key
+
+GENERAL INFO
+("currentUsername", userid) // to identify the currently logged in user, use localStorage.getItem("currentUsername"), "undefined"/null/"" if empty
+e.g. ("currentUsername", miketyson) means username miketyson is logged in :)
+
+ACCOUNT INFO:
+Includes userid, password, first name, last name, email, gender
+e.g. userid is "blue52", (key,value) pairs would be:
+	("blue52","password123")	<!-- this is userid and password -->
+	("blue52FirstName","Mike")
+	("blue52LastName","Tyson")
+	("blue52Email","blueunicorn@gmail.com")
+	("blue52Gender","Female") 	<!-- should only be either "Female", "Male" or "Other" -->
+	("blue52FirstName","Mike")
+
+GOALS:
+Includes status of all goals (unchecked,checked, or completed)
+e.g. userid is "blue52", set and get would be:
+	localStorage.setItem("blue52Goals", JSON.stringify(statusOfGoals));
+	var statusOfGoals = JSON.parse(localStorage.getItem("names"));
+Initialise using:
+	var statusOfGoals = new Array();
+	for (var i = 0; i < 9; i++){
+		var nestedArr = new Array();
+		for (var j = 0; j < 4; j++){
+			nestedArr[j] = "unchecked";
+		}
+		statusOfGoals[i] = nestedArr;
+	}
+	localStorage.setItem("blue52Goals", JSON.stringify(statusOfGoals));
+HTML for goals:
+	for a "checked" goal
+		<li class="tile--single-step" id="physicalhealth0">
+			<div class="tile--content">
+				<p class="tile--text">Put yourself in social situation where you are the only one of your cultural group</p>
+				<div class="tile--button-container">
+					<button onclick="removeGoal('physicalhealth',1)" class="tile--button-in-container">&#x2715; Remove Goal</button>
+					<button onclick="completeGoal('physicalhealth',1)" class="tile--button-in-container">&#x2610; Complete Goal</button>
+				</div>
+			</div>
+		</li>
+	for a "unchecked" goal
+		<li class="tile--single-step" id="physicalhealth2">
+			<div class="tile--content">
+				<p class="tile--text">Celebrate/go to a festival</p>
+				<button onclick="addGoal('physicalhealth',2)" class="tile--button-text">&#x271A; Add to my goals</button>
+			</div>
+		</li>
+	for a "completed" goal
+		<li class="tile--single-step" id="physicalhealth1">
+			<div class="tile--content">
+				<p class="tile--text">Be authentic. Be yourself.</p>
+				<button onclick="addGoal('physicalhealth',1)" class="tile--button-text">&#x2714; Undo Complete</button>
+		    </div>
+		</li>
+
+QUIZ:
+Includes quiz results
+e.g. userid is "blue52", (key,value) pairs would be:
+	("blue52Quiz","23")			<!-- for a score of 23/100 -->
+			OR
+	("blue52Quiz","")			<!-- the user has not take the quiz -->
+
+Best and worst domains
+e.g. userid is "blue52), (key, value) pairs would be:
+	("blue52BestDomain", "relationships");
+	("blue52WorstDomain", "culture, government");
+	
+& ("tempUserBestDomain", "relationships");
+	("blue52WorstDomain", "culture, government");
+	for user not logged in
+	
+@Jenny - If there is more than one value for best or worst domain, you could separate it by a comma and write a function to separate out each part OR possibly use an array of strings? (see 'GOALS header' above for further instructions)

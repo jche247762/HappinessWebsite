@@ -1,0 +1,170 @@
+<!-- This page is correctly indented 22/10 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Home | GetHappy</title>
+	<link href="css/reset.css" rel="stylesheet" />
+	<link href="css/styling.css" rel="stylesheet" />
+	<link href="css/header-and-footer.css" rel="stylesheet" />
+	<link href="css/buttons.css" rel="stylesheet" />
+	<link href="css/padding-and-margin.css" rel="stylesheet" />
+	<link href="css/tile-styles.css" rel="stylesheet" />
+	<link href="css/images.css" rel="stylesheet" />
+	<link href="css/login-signup.css" rel="stylesheet" />
+
+	<script src="js/jquery.js"></script>
+	<script src="js/login.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/animation.js"></script>
+</head>
+<body>
+	<!-- top navigation -->
+	<nav>
+  	<p class="logo"><a href="index.html">GetHappy.co</a></p>
+		<ul>
+				<li class="nav-bar"> <!-- li tags indented one extra to stay in line with li tags surrounded by divs -->
+					<button class="mbutton button--blue" id="loginButton" onclick="document.getElementById('login-modal').style.display='block'">
+						Log In
+					</button>
+					<div id="username" class="dropdown-content font--orange">
+						<ul class="user-account">
+							<li><a href="mygoals.html">Goal Page</a></li>
+							<li><a href="myinfo.html">Account Information</a></li>
+							<li>Sign Out</li>
+						</ul>
+					</div>
+					<!-- login modal -->
+					<div id="login-modal" class="login-modal">
+						<form class="login-modal-content animate" onSubmit="checkLogin()">
+							<div class="login-head">
+								<span onclick="document.getElementById('login-modal').style.display='none'" class="login-modal-close" title="CloseModal">&times;</span>
+								<h2>Log In</h2>
+							</div>
+							<div class="login-container">
+								<div>
+									<label>Username</label>
+									<input type="text" name="username" placeholder="Your username here" id="usernameLogin" required>
+								</div>
+								<div class="login-field-password">
+									<label>Password</label>
+									<input type="password" name="password" placeholder="Your password here" id="passwordLogin" required>
+									<span class="password-message"><a href="#">Forgot your password?</a></span>
+								</div>
+								<div class="login-submit">
+									<button type="submit" class="button--blue button--text button--center">Login</button>
+								</div>
+								<div class="login-noaccount">
+									<p><span>Don't have an account?</span><a href="signup.html"> Sign Up</a></p>
+								</div>
+							</div>
+						</form>
+					</div>
+				</li>
+  		<div class="dropdown">
+      	<li class="nav-bar">
+					<a href="research.html">The Research</a>
+				</li>
+			  <div class="dropdown-content">
+					<ul>
+						<!-- the links are outside so that the link will work when hovered over the box, not just the text -->
+				  	<a href="rsrchphysicalhealth.html"><li>Physical Health</li></a>
+			  		<a href="rsrchmentalhealth.html"><li>Mental Health</li></a>
+			  		<a href="rsrchtimeuse.html"><li>Time Use</li></a>
+			  		<a href="rsrcheducation.html"><li>Education &amp; Work</li></a>
+			  		<a href="rsrchculture.html"><li>Culture</li></a>
+			  		<a href="rsrchgovernment.html"><li>Government</li></a>
+			  		<a href="rsrchrelationships.html"><li>Relationships</li></a>
+			  		<a href="rsrchfinances.html"><li>Finances</li></a>
+			  		<a href="rsrchenvironment.html"><li>Environment</li></a>
+					</ul>
+			  </div>
+  		</div>
+				<li class="nav-bar"><a href="quiz.html">Happiness Quiz</a></li> <!-- li tags indented one extra to stay in line with li tags surrounded by divs -->
+				<li class="nav-bar"><a href="aboutus.html">About Us</a></li>
+		</ul>
+	</nav>
+
+	<!-- main content area -->
+	<section>
+    <div class="background--home-1 background--layout">
+			<div class="wrapper--indent">
+				<h1>Get Happy</h1>
+				<p class="subtitle">Practical steps towards getting happier, based on the Global National Happiness Index.</p>
+				<button class="button--blue button--text" onclick="window.location.href='quiz.html'">Take the happiness quiz</button>
+			</div>
+    </div>
+	</section>
+	<section>
+    <div class="background--home-2 background--layout">
+			<div class="animate--font">
+				<h2 class="font--white">You can be happier</h2>
+				<p class="subtitle font--white">Wherever you’re going in life, make sure you’re moving in the right direction. Whatever your circumstances, there are things you can do now to better your happiness.</p>
+			</div>
+    </div>
+	</section>
+	<section>
+    <div class="background--home-3 background--layout">
+			<div class="animate--font">
+				<h2 class="font--orange">Our research</h2>
+				<p class="subtitle">Our recommendations are based on the nine domains of happiness used in Bhutan’s Global National Happiness Index, and cover a range of individual and societal factors.</p>
+				<button class="button--blue button--text">Learn More</button>
+			</div>
+    </div>
+	</section>
+	<section>
+    <div class="background--home-4 background--layout">
+			<div class="center--content">
+				<h2 class="font-center">Take the happiness quiz</h2>
+				<p class="font-center">You’ll receive personalised tips on areas your happiness can be improved.</p>
+				<button class="button--white button--text button--center" onclick="window.location.href='quiz.html'">Let's do it</button>
+			</div>
+    </div>
+	</section>
+
+	<!-- footer -->
+	<footer>
+    <div>
+      <h5>GetHappy</h5>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="signup.html">Sign Up</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="quiz.html">The Happiness Quiz</a></li>
+			</ul>
+    </div>
+  	<div>
+			<h5>The Research</h5>
+			<ul>
+				<li><a href="rsrchphysicalhealth.html">Physical Health</a></li>
+				<li><a href="rsrchmentalhealth.html">Mental Health</a></li>
+				<li><a href="rsrchtimeuse.html">Time Use</a></li>
+				<li><a href="rsrcheducation.html">Education &amp; Work</a></li>
+				<li><a href="rsrchculture.html">Culture</a></li>
+    	</ul>
+  	</div>
+	  <div>
+      <ul>
+      	<li><br></li>
+				<li><a href="rsrchgovernment.html">Government</a></li>
+				<li><a href="rsrchrelationships.html">Relationships</a></li>
+				<li><a href="rsrchfinances.html">Finances</a></li>
+				<li><a href="rsrchenvironment.html">Environment</a></li>
+			</ul>
+	  </div>
+  	<div>
+			<h5>Help</h5>
+			<ul>
+				<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="feedback.html">Feedback</a></li>
+				<li><a href="faqs.html">FAQ</a></li>
+				<li><a href="privacypolicy.html">Privacy Policy</a></li>
+			</ul>
+  	</div>
+ 		<div class="bottom">
+    	<a href="index.html"><p class="logo">GetHappy.co</p></a>
+			<p>Get in contact at <strong>hello@gethappy.co</strong></p>
+  	</div>
+	</footer>
+</body>
+</html>
+

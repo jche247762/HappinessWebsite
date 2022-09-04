@@ -1,0 +1,65 @@
+
+section {
+	width: 100vw;
+	/*height: 320px;*/
+}
+
+/*this will indent and position each section that contains text*/
+.wrapper--indent {
+    padding: 5% 0 5% 14%;
+    width: 50%;
+}
+
+/*animated -- font to slide up when page scrolls -- dont delete pls*/
+.animate--font {
+    padding: 15% 0 5% 14%;
+    width: 50%;
+    opacity:0;
+}
+
+/*this is the paragraph description under each header*/
+.wrapper--indent > p {
+    padding: 24px 0;
+}
+
+/*these class will center the font position vertically*/
+p.font-center {
+	padding: 24px 0;
+}
+
+.center--content {
+	padding-top: 8%
+}
+
+.center--paragraph {
+	margin: 60px auto;
+    width: 50%;
+    height: 50%;
+}
+
+.center--banner-heading {
+    height: inherit;
+    display: flex;
+	margin: auto;
+    justify-content: center;
+    align-items: center;
+	width: 100%;
+}
+
+.wrapper--padding {
+	padding: 12px 0;
+}
+
+.header--padding {
+	padding: 24px 0;
+}
+
+/*makes two columns*/
+.columns--container {
+	display: table;
+}
+
+.columns--two {
+    display: table-cell;
+    width: 50%;
+}

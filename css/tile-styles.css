@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:700');
+
+/*********************** tile layout for index.html 5x5 ***********************/
+
+ul.tile--wrapper {
+    margin: 0 17%;
+}
+
+li.tile--layout {
+	display: inline-block;
+    width: calc(100%/3 - 27px);
+    margin: 0 12px 48px 12px;
+}
+
+/*this is a single tile*/
+.tile--single {
+	display: inline-block;
+	position: relative;
+	border-radius: 8px;
+	box-shadow: 0 0 1px rgba(33,33,33,.2);
+}
+
+.tile--single:hover {
+	-moz-transform: scale(1.03);
+	-webkit-transform: scale(1.03);
+	transform: scale(1.03);
+	box-shadow: 0 0 3px rgba(33,33,33,.2);
+}
+
+/*img for each tile*/
+.tile--img {
+	height: 160px;
+	object-fit: fill;
+  border-radius: 8px 8px 0 0;
+  display: block;
+}
+
+/*this is the label with each single tile*/
+.tile--label {
+	padding: 12px 16px;
+    text-align: center;
+   	margin-top: -3px;
+   	color: #fff;
+    height: 36px;
+    line-height: 36px;
+    font-weight: 400;
+}
+
+/*colour of the label's background*/
+.label--background {
+	width: 100%;
+	background-color: #ff9a00;
+	border-radius: 0 0 8px 8px;
+	/*box-shadow: 0 0 5px rgba(33,33,33,.2);*/
+}
+
+/************** tile style for content pages - 4x4 **************/
+.tile--heading {
+	padding: 36px 0 0 0;
+}
+
+.tile--layout-step {
+	width: 100%;
+	margin: 36px auto;
+	text-align:center;
+}
+
+.tile--single-step {
+	width: 210px;
+	height: 210px;
+	display: inline-block;
+	background-color: #ffffff;
+    margin: 0 22px;
+	vertical-align: top;
+	border-radius: 4px;
+}
+
+.tile--content {
+	height: 100%;
+	position: relative;
+}
+
+.tile--text {
+	padding: 10%;
+}
+
+.tile--button-text {
+	position: absolute;
+    bottom: 0;
+	border: 0;
+	box-shadow: none;
+	font-family: 'Rubik';
+	text-transform: uppercase;
+   	font-size: 12px;
+   	color: #7a899a;
+   	width: 100%;
+	left: 0;
+}
+
+.tile--single a {
+	text-decoration: none;
+}
+
+.tile--button-container{
+	position: absolute;
+    bottom: 0;
+	border: 0;
+	width: 100%;
+	left: 0;
+	display: flex;
+	flex-direction: column-reverse;
+}
+.tile--button-in-container {
+	padding-top: 0px;
+	padding-bottom: 10px;
+	box-shadow: none;
+	font-family: 'Rubik';
+	text-transform: uppercase;
+   	font-size: 12px;
+   	color: #e0e7f0;
+   	width: 100%;
+}

@@ -1,0 +1,42 @@
+.about--wrapper {
+	margin: 0 17% 80px 17%;
+	display: inline-block;
+}
+
+.about--row {
+	margin: auto;
+	display: block;
+}
+
+.about--row img {
+	height: 200px;
+	border-radius: 8px;
+}
+
+.about--person {
+	float: left;
+	margin: 20px 40px;
+	width: 200px;
+}
+
+.about--row ul li {
+	display: inline;
+}
+
+.about--text {
+	display: inline-block;
+	width: 200px;
+}
+
+.about--text h4, .about--text p {
+	text-align: center;
+	line-height: 1.7;
+}
+
+.about--text p {
+	padding-bottom: 0;
+}
+
+.about--text h4 {
+	color: #4990e2;
+}
