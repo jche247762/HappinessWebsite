@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>About Us | GetHappy</title>
+		<link href="css/reset.css" rel="stylesheet" />
+		<link href="css/styling.css" rel="stylesheet" />
+		<link href="css/header-and-footer.css" rel="stylesheet" />
+		<link href="css/buttons.css" rel="stylesheet" />
+		<link href="css/padding-and-margin.css" rel="stylesheet" />
+		<link href="css/tile-styles.css" rel="stylesheet" />
+		<link href="css/images.css" rel="stylesheet" />
+		<link href="css/about.css" rel="stylesheet" />
+		<link href="css/login-signup.css" rel="stylesheet" />
+		<script src="js/jquery.js"></script>
+		<script src="js/login.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/goalsall.js"></script>
+		<script src="js/goalsset.js"></script>
+		
+	</head>
+	<body>
+    <!-- header -->
+	<nav>
+  	<p class="logo"><a href="index.html">GetHappy.co</a></p>
+		<ul>
+				<li class="nav-bar"> <!-- li tags indented one extra to stay in line with li tags surrounded by divs -->
+					<button class="mbutton button--blue" id="loginButton" onclick="document.getElementById('login-modal').style.display='block'">
+						Log In
+					</button>
+					<div id="username" class="dropdown-content font--orange">
+						<ul class="user-account">
+							<li><a href="mygoals.html">Goal Page</a></li>
+							<li><a href="myinfo.html">Account Information</a></li>
+							<li>Sign Out</li>
+						</ul>
+					</div>
+					<!-- login modal -->
+					<div id="login-modal" class="login-modal">
+						<form class="login-modal-content animate" onSubmit="checkLogin()">
+							<div class="login-head">
+								<span onclick="document.getElementById('login-modal').style.display='none'" class="login-modal-close" title="CloseModal">&times;</span>
+								<h2>Log In</h2>
+							</div>
+							<div class="login-container">
+								<div>
+									<label>Username</label>
+									<input type="text" name="username" placeholder="Your username here" id="usernameLogin" required>
+								</div>
+								<div class="login-field-password">
+									<label>Password</label>
+									<input type="password" name="password" placeholder="Your password here" id="passwordLogin" required>
+									<span class="password-message"><a href="#">Forgot your password?</a></span>
+								</div>
+								<div class="login-submit">
+									<button type="submit" class="button--blue button--text button--center">Login</button>
+								</div>
+								<div class="login-noaccount">
+									<p><span>Don't have an account?</span><a href="signup.html"> Sign Up</a></p>
+								</div>
+							</div>
+						</form>
+					</div>
+				</li>
+  		<div class="dropdown">
+      	<li class="nav-bar">
+					<a href="research.html">The Research</a>
+				</li>
+			  <div class="dropdown-content">
+					<ul>
+						<!-- the links are outside so that the link will work when hovered over the box, not just the text -->
+				  	<a href="rsrchphysicalhealth.html"><li>Physical Health</li></a>
+			  		<a href="rsrchmentalhealth.html"><li>Mental Health</li></a>
+			  		<a href="rsrchtimeuse.html"><li>Time Use</li></a>
+			  		<a href="rsrcheducation.html"><li>Education &amp; Work</li></a>
+			  		<a href="rsrchculture.html"><li>Culture</li></a>
+			  		<a href="rsrchgovernment.html"><li>Government</li></a>
+			  		<a href="rsrchrelationships.html"><li>Relationships</li></a>
+			  		<a href="rsrchfinances.html"><li>Finances</li></a>
+			  		<a href="rsrchenvironment.html"><li>Environment</li></a>
+					</ul>
+			  </div>
+  		</div>
+				<li class="nav-bar"><a href="quiz.html">Happiness Quiz</a></li> <!-- li tags indented one extra to stay in line with li tags surrounded by divs -->
+				<li class="nav-bar"><a href="aboutus.html">About Us</a></li>
+		</ul>
+	</nav>
+
+    <!-- main content area -->
+		<section class="background--banner-physical background--layout">
+			<div class="center--banner-heading">
+				<div class="background--white-heading">
+					<h1 class="font--orange font-center">Physical Health</h1>
+				</div>
+			</div>
+		</section>
+		<div class="center--paragraph">
+			<p><span class="font--orange font-first-sentence">It's easy to get caught up in the hustle and bustle of everyday life and lose sight of what makes you happy.</span> Really happy. But making sure your happiness meter is giving optimal readings can provide many health benefits. Happy people have younger hearts, younger arteries, and a younger RealAge. Happy people recover more quickly from surgery, cope better with pain, have lower blood pressure, and have longer life expectancy than unhappy people. Studies also suggest that happy people may have stronger immune systems -- they're less likely to get colds and flu viruses. And when they do, their symptoms tend to be mild.</p>
+			<div class="border--quote">
+				<p class="font--quote font--orange">Happy people may have stronger immune systems -- they're less likely to get colds and flu viruses</p>
+			</div>
+			<p>Not surprisingly, happy people are better at looking after their health, too. When people's happiness levels improve, so do their health behaviors. They exercise more, wear sunscreen, and go for regular checkups.</p>
+		</div>
+		<section class="background--blue">
+			<div class="tile--heading">
+				<h2 class="font--white font-center">Practical Steps</h2>
+			</div>
+			<ul class="tile--layout-step" id="physicalhealth">
+				<li class="tile--single-step" id="physicalhealth0">
+					<div class="tile--content">
+						<p class="tile--text">Explore the full range of emotions and express them in a healthy way.</p>
+						<button onclick="addGoal('physicalhealth',0)" class="tile--button-text">&#x271A; Add to my goals</button>
+					</div>
+				</li>
+				<li class="tile--single-step" id="physicalhealth1">
+					<div class="tile--content">
+						<p class="tile--text">Take health breaks, take 10 minutes to stretch, walk or breath deeply.</p>
+						<button onclick="addGoal('physicalhealth',1)" class="tile--button-text">&#x271A; Add to my goals</button>
+					</div>
+				</li>
+				<li class="tile--single-step" id="physicalhealth2">
+					<div class="tile--content">
+						<p class="tile--text">Eat local Veggies. Plant a garden. Get to know what fruits and vegetables grow locally.</p>
+						<button onclick="addGoal('physicalhealth',2)" class="tile--button-text">&#x271A; Add to my goals</button>
+				    </div>
+				</li>
+				<li class="tile--single-step" id="physicalhealth3">
+					<div class="tile--content">
+						<p class="tile--text">Sleep. Give yourself extra time to sleep. Catch up on some rest. </p>
+						<button onclick="addGoal('physicalhealth',3)" class="tile--button-text">&#x271A; Add to my goals</button>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<!-- footer -->
+		<footer>
+    <div>
+      <h5>GetHappy</h5>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="signup.html">Sign Up</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="quiz.html">The Happiness Quiz</a></li>
+			</ul>
+    </div>
+  	<div>
+			<h5>The Research</h5>
+			<ul>
+				<li><a href="rsrchphysicalhealth.html">Physical Health</a></li>
+				<li><a href="rsrchmentalhealth.html">Mental Health</a></li>
+				<li><a href="rsrchtimeuse.html">Time Use</a></li>
+				<li><a href="rsrcheducation.html">Education &amp; Work</a></li>
+				<li><a href="rsrchculture.html">Culture</a></li>
+    	</ul>
+  	</div>
+	  <div>
+      <ul>
+      	<li><br></li>
+				<li><a href="rsrchgovernment.html">Government</a></li>
+				<li><a href="rsrchrelationships.html">Relationships</a></li>
+				<li><a href="rsrchfinances.html">Finances</a></li>
+				<li><a href="rsrchenvironment.html">Environment</a></li>
+			</ul>
+	  </div>
+  	<div>
+			<h5>Help</h5>
+			<ul>
+				<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="feedback.html">Feedback</a></li>
+				<li><a href="faqs.html">FAQ</a></li>
+				<li><a href="privacypolicy.html">Privacy Policy</a></li>
+			</ul>
+  	</div>
+ 		<div class="bottom">
+    	<a href="index.html"><p class="logo">GetHappy.co</p></a>
+			<p>Get in contact at <strong>hello@gethappy.co</strong></p>
+  	</div>
+	</footer>
+	</body>
+</html>
